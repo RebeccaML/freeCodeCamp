@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Survey</title>
+        <title>D&D Survey</title>
         <link rel="stylesheet" type="text/css" href="survey.css">
     </head>
     <body>
@@ -11,44 +11,44 @@
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <div id="container">
             <header>
-                <h1 id="title">Survey Form</h1>
+                <h1 id="title">D&D Survey Form</h1>
             </header>
             <div id="survey">
                 <p id="description">
                     Thank you for your interest in joining a regular Dungeons and Dragons session. Please fill out the form below.
-                </p>
+                </p><br>
                 <form id="survey-form">
                     <label id="name-label" for="name">Name: </label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
                     <label id="email-label" for="email">Email: </label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
                     <label id="number-label" for="age">Age: </label>
-                    <input type="number" name="age" id="number" min="15" max="120" placeholder="Enter your age"><br>
+                    <input type="number" name="age" id="number" min="15" max="120" placeholder="Enter your age">
                     <label for="role">Preferred role: </label>
                     <select id="dropdown" name="role" id="role">
                         <option value="bard">Bard</option>
-                        <option value="ranged">DPS (ranged)</option>
                         <option value="melee">DPS (melee)</option>
+                        <option value="ranged">DPS (ranged)</option>
                         <option value="healer">Healer</option>
                         <option value="tank">Tank</option>
-                    </select><br>
-                    <label for="experience">How long have you been playing? (any role): </label>
-                    <input type="radio" name="experience" value="none">New player<br>
-                    <input type="radio" name="experience" value="1-2">1-2 years<br>
-                    <input type="radio" name="experience" value="2-5">2-5 years <br>
-                    <input type="radio" name="experience" value="5">5 years or more<br>
+                    </select>
+                    <label for="experience">How long have you been playing?:</label>
+                        <p class="label"><input type="radio" name="experience" value="none"><span class="list-text">New player</span></p>
+                        <p class="label"><input type="radio" name="experience" value="1-2"><span class="list-text">1-2 years</span></p>
+                        <p class="label"><input type="radio" name="experience" value="2-5"><span class="list-text">2-5 years</span></p>
+                        <p class="label"><input type="radio" name="experience" value="5"><span class="list-text">5 years or more</span></p>
                     <label for="availability">When are you available?</label>
-                    <input type="checkbox" name="availability" value="Mon">Monday evenings<br>
-                    <input type="checkbox" name="availability" value="Tue">Tuesday evenings<br>
-                    <input type="checkbox" name="availability" value="Wed">Wednesday evenings<br>
-                    <input type="checkbox" name="availability" value="Thu">Thursday evenings<br>
-                    <input type="checkbox" name="availability" value="Fri">Friday evenings<br>
-                    <input type="checkbox" name="availability" value="SatAM">Saturday mornings<br>
-                    <input type="checkbox" name="availability" value="SatPM">Saturday evenings<br>
-                    <input type="checkbox" name="availability" value="SunAM">Sunday mornings<br>
-                    <input type="checkbox" name="availability" value="SunPM">Sunday evenings<br>
+                        <p class="label"><input type="checkbox" name="availability" value="Mon"><span class="list-text">Monday evenings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="Tue"><span class="list-text">Tuesday evenings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="Wed"><span class="list-text">Wednesday evenings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="Thu"><span class="list-text">Thursday evenings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="Fri"><span class="list-text">Friday evenings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="SatAM"><span class="list-text">Saturday mornings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="SatPM"><span class="list-text">Saturday evenings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="SunAM"><span class="list-text">Sunday mornings</span></p>
+                        <p class="label"><input type="checkbox" name="availability" value="SunPM"><span class="list-text">Sunday evenings</span></p>
                     <label for="comments">Anything else you'd like to add? </label>
-                    <textarea name="comments"></textarea><br>
+                    <textarea name="comments"></textarea>
                     <button id="submit" type="submit">Submit</button>
                 </form>
             </div>
