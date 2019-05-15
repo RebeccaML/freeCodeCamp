@@ -6,11 +6,54 @@
         <link rel="stylesheet" type="text/css" href="survey.css">
     </head>
     <body>
-        <header>
-
-        </header>
+        <!-- Freecodecamp test suite -->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <div id="container">
+            <header>
+                <h1 id="title">Survey Form</h1>
+            </header>
+            <div id="survey">
+                <p id="description">
+                    Thank you for your interest in joining a regular Dungeons and Dragons session. Please fill out the form below.
+                </p>
+                <form id="survey-form">
+                    <label id="name-label" for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+                    <label id="email-label" for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+                    <label id="number-label" for="age">Age: </label>
+                    <input type="number" name="age" id="number" min="15" max="120" placeholder="Enter your age"><br>
+                    <label for="role">Preferred role: </label>
+                    <select id="dropdown" name="role" id="role">
+                        <option value="bard">Bard</option>
+                        <option value="ranged">DPS (ranged)</option>
+                        <option value="melee">DPS (melee)</option>
+                        <option value="healer">Healer</option>
+                        <option value="tank">Tank</option>
+                    </select><br>
+                    <label for="experience">How long have you been playing? (any role): </label>
+                    <input type="radio" name="experience" value="none">New player<br>
+                    <input type="radio" name="experience" value="1-2">1-2 years<br>
+                    <input type="radio" name="experience" value="2-5">2-5 years <br>
+                    <input type="radio" name="experience" value="5">5 years or more<br>
+                    <label for="availability">When are you available?</label>
+                    <input type="checkbox" name="availability" value="Mon">Monday evenings<br>
+                    <input type="checkbox" name="availability" value="Tue">Tuesday evenings<br>
+                    <input type="checkbox" name="availability" value="Wed">Wednesday evenings<br>
+                    <input type="checkbox" name="availability" value="Thu">Thursday evenings<br>
+                    <input type="checkbox" name="availability" value="Fri">Friday evenings<br>
+                    <input type="checkbox" name="availability" value="SatAM">Saturday mornings<br>
+                    <input type="checkbox" name="availability" value="SatPM">Saturday evenings<br>
+                    <input type="checkbox" name="availability" value="SunAM">Sunday mornings<br>
+                    <input type="checkbox" name="availability" value="SunPM">Sunday evenings<br>
+                    <label for="comments">Anything else you'd like to add? </label>
+                    <textarea name="comments"></textarea><br>
+                    <button id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
         <footer>
-
+            By Rebecca Lowe
         </footer>
     </body>
 </html>
