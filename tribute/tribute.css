@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+#main {
+  flex: 1 0 auto;
+}
+header {
+  background-color: #090D3E;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+#content {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+blockquote {
+  flex: 1 2 200px;
+  align-self: center;
+  font-size: 1.25em;
+  text-align: center;
+  box-shadow: 1px 1px 25px 5px #9C9FC0 inset;
+  border-radius: 15px;
+}
+blockquote p {
+  padding: 15px;
+}
+#img-div {
+  flex: 2 1 300px;
+  text-align: center;
+}
+img {
+  display: block;
+  max-width: 500px;
+}
+figcaption {
+  padding: 10px;
+  font-size: 1.15em;
+}
+#tribute-info {
+  flex: 4 1 400px;
+  padding: 0 30px 0 30px;
+}
+#tribute-info p {
+  padding: 10px;
+  line-height: 1.5em;
+}
+a {
+  color: #090D3E;
+}
+a:hover {
+  color: #9C9FC0;
+}
+footer {
+  background-color: #090D3E;
+  color: white;
+  flex-shrink: 0;
+  padding: 10px;
+  text-align: center;
+}
