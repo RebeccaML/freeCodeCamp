@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    background-color: #5B14C1;
+    text-align: center;
+    font-size: 1.3em;
+    box-shadow: 0 3px 10px 5px #3B304B;
+}
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+}
+nav a:hover {
+    background-color: #D3BDF2;
+    color: #5B14C1;
+}
+#container {
+    flex: 1 0 auto;
+}
+#welcome-section {
+    background-color: #D3BDF2;
+    width: 100vw;
+    height: 100vh;
+}
+#welcome-section h1 {
+    line-height: 100vh;
+}
+h1 {
+    color: #481296;
+    font-size: 1.7em;
+    text-align: center;
+}
+#projects {
+    padding: 30px;
+}
+#contact {
+    text-align: center;
+    padding: 30px;
+}
+#projects h1, #contact h1 {
+    padding-bottom: 30px;
+}
+button {
+    border: 1px solid #481296;
+    border-radius: 5px;
+    background-color: #5B14C1;
+    padding: 10px;
+    font-size: 1.3em;
+    color: #FFFFFF;
+    margin: 0 5px 0 5px;
+}
+button:hover {
+    background-color: #D3BDF2;
+    color: #481296;
+    cursor: pointer; 
+}
+footer {
+    flex-shrink: 0;
+    background-color: #5B14C1;
+    padding: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
