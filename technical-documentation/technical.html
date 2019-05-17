@@ -9,22 +9,21 @@
     <body>
         <!-- Freecodecamp test suite -->
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <!-- known test failure: test is not detecting my media query. I'm satisfied this meets the requirements. -->
         <div id="container">
             <nav id="navbar">
                 <header id="navbar-header"><h1>Python Basics</h1></header>
                 <ul>
                     <a href="#introduction" class="nav-link"><li>Introduction</li></a>
-                    <a href="#using_python_as_calculator" class="nav-link"><li>Using Python as a Calculator</li></a>
-                    <a href="#first_steps" class="nav-link"><li>First Steps Towards Programming</li></a>
-                    <a href="#introduction" class="nav-link"><li>Introduction</li></a>
-                    <a href="#introduction" class="nav-link"><li>Introduction</li></a>
-                    <a href="#introduction" class="nav-link"><li>Introduction</li></a>
-                    <a href="#introduction" class="nav-link"><li>Introduction</li></a>
+                    <a href="#using_python_as_a_calculator" class="nav-link"><li>Using Python as a Calculator</li></a>
+                    <a href="#first_steps_towards_programming" class="nav-link"><li>First Steps Towards Programming</li></a>
+                    <a href="#more_control_flow_tools" class="nav-link"><li>More Control Flow Tools</li></a>
+                    <a href="#data_structures" class="nav-link"><li>Data Structures</li></a>
                 </ul>
             </nav>
             <main id="main-doc">
                 <section id="introduction" class="main-section">
-                    <header><h2>Introduction</h2></header>
+                    <header id="introduction"><h2>Introduction</h2></header>
                     <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach
                         to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language
                         for scripting and rapid application development in many areas on most platforms.
@@ -54,8 +53,8 @@ spam = 1  # and this is the second comment
 # ... and now a third!
 text = "# This is not a comment because it's inside quotes."</code>
                 </section>
-                <section id="using_python_as_calculator" class="main-section">
-                    <header><h2>Using Python as a Calculator</h2></header>
+                <section id="using_python_as_a_calculator" class="main-section">
+                    <header id="using_python_as_a_calculator"><h2>Using Python as a Calculator</h2></header>
                     <p>Let’s try some simple Python commands. Start the interpreter and wait for the primary prompt, >>>. (It shouldn’t take long.)
                     </p>
                     <h3>Numbers</h3>
@@ -88,8 +87,8 @@ text = "# This is not a comment because it's inside quotes."</code>
 >>> '"Isn\'t," they said.'
 '"Isn\'t," they said.'</code>
                 </section>
-                <section id="#first_steps" class="main-section">
-                    <header><h2>First Steps Towards Programming</h2></header>
+                <section id="first_steps_towards_programming" class="main-section">
+                    <header id="first_steps_towards_programming"><h2>First Steps Towards Programming</h2></header>
                     <p>Of course, we can use Python for more complicated tasks than adding two and two together.
                         For instance, we can write an initial sub-sequence of the Fibonacci series as follows:
                     </p>
@@ -113,7 +112,7 @@ text = "# This is not a comment because it's inside quotes."</code>
                             get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all
                             evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.
                         </li>
-                        <li>The <span class="reserved_word">while</span> loop executes as long as the condition (here: <code>a < 10</code>) remains true.
+                        <li>The <span class="reserved-word">while</span> loop executes as long as the condition (here: <code>a < 10</code>) remains true.
                             In Python, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value,
                             in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple
                             comparison. The standard comparison operators are written the same as in C: <code><</code> (less than), <code>></code> (greater than),
@@ -126,7 +125,7 @@ text = "# This is not a comment because it's inside quotes."</code>
                             by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a
                             basic block must be indented by the same amount.
                         </li>
-                        <li>The <span class="reserved_word">print()</span> function writes the value of the argument(s) it is given. It differs from just writing
+                        <li>The <span class="reserved-word">print()</span> function writes the value of the argument(s) it is given. It differs from just writing
                             the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments,
                             floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format
                             things nicely, like this:
@@ -136,16 +135,52 @@ text = "# This is not a comment because it's inside quotes."</code>
 >>> print('The value of i is', i)
 The value of i is 65536</code>
                 </section>
-                <section id="section4" class="main-section">
-                    <header><h2>Fourth Section</h2></header>
+                <section id="more_control_flow_tools" class="main-section">
+                    <header id="more_control_flow_tools"><h2>More Control Flow Tools</h2></header>
+                    <p>Besides the <span class="reserved-word">while</span> statement just introduced, Python knows the usual control flow statements known from other languages, with some twists.
+                    </p>
+                    <h3><span class="reserved-word">if</span> Statements</h3>
+                    <p>Perhaps the most well-known statement type is the <span class="reserved-word">if</span> statement. For example:
+                    </p>
+                    <code>>>> x = int(input("Please enter an integer: "))
+Please enter an integer: 42
+>>> if x < 0:
+...     x = 0
+...     print('Negative changed to zero')
+... elif x == 0:
+...     print('Zero')
+... elif x == 1:
+...     print('Single')
+... else:
+...     print('More')
+...
+More</code>
+                    <p>There can be zero or more <span class="reserved-word">elif</span> parts, and the <span class="reserved-word">else</span>
+                        part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence
+                        is a substitute for the <code>switch</code> or <code>case</code> statements found in other languages.</p>
                 </section>
-                <section id="section5" class="main-section">
-                    <header><h2>Fifth Section</h2></header>
+                <section id="data_structures" class="main-section">
+                    <header id="data_structures"><h2>Data Structures</h2></header>
+                    <p>This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.
+                    </p>
+                    <h3>More on Lists</h3>
+                    <p>The list data type has some more methods. Here are some of the methods of list objects:
+                    </p>
+                    <ul>
+                        <li>list.append(x) - Add an item to the end of the list. Equivalent to <code>a[len(a):] = [x]</code>.
+                        </li>
+                        <li>list.extend(iterable) - Extend the list by appending all the items from the iterable. Equivalent to <code>a[len(a):] = iterable.</code></li>
+                        <li>list.insert(i, x) - Insert an item at a given position. The first argument is the index of the element before which to insert,
+                            so <code>a.insert(0, x)</code> inserts at the front of the list, and <code>a.insert(len(a), x)</code> is equivalent
+                            to <code>a.append(x)</code>.
+
+                        </li>
+                    </ul>
                 </section>
             </main>
         </div>
         <footer>
-            Footer
+            By Rebecca Lowe 2019. Text abbreviated from <a href="https://docs.python.org/3/tutorial/index.html">the Python docs</a>
         </footer>
     </body>
 </html>
