@@ -21,7 +21,7 @@ nav {
     box-shadow: 0 3px 10px 5px #3B304B;
 }
 nav a {
-    color: #FFFFFF;
+    color: #EEE9F5;
     text-decoration: none;
     padding: 10px 20px 10px 20px;
 }
@@ -31,6 +31,9 @@ nav a:hover {
 }
 #container {
     flex: 1 0 auto;
+}
+main {
+    background-color: #EEE9F5;
 }
 #welcome-section {
     background-color: #D3BDF2;
@@ -48,6 +51,22 @@ h1 {
 #projects {
     padding: 30px;
 }
+#project_gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    width: 70%;
+    margin: auto;
+}
+.project-tile {
+    max-width: 90%;
+    border: 1px solid #481296;
+    border-radius: 5px;
+    padding: 5px;
+}
+.project-tile:hover {
+    box-shadow: 0 0 2px 2px;
+}
 #contact {
     text-align: center;
     padding: 30px;
@@ -61,7 +80,7 @@ button {
     background-color: #5B14C1;
     padding: 10px;
     font-size: 1.3em;
-    color: #FFFFFF;
+    color: #EEE9F5;
     margin: 0 5px 0 5px;
 }
 button:hover {
@@ -73,6 +92,12 @@ footer {
     flex-shrink: 0;
     background-color: #5B14C1;
     padding: 10px;
-    color: #FFFFFF;
+    color: #EEE9F5;
     text-align: center;
+}
+@media (max-width: 700px) {
+    #project_gallery {
+        grid-gap: 20px;
+        width: 90%;
+    }
 }
