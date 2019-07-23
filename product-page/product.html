@@ -1,93 +1,104 @@
 <!DOCTYPE html>
 <!-- requirements here: https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Product Landing Page</title>
-        <link rel="stylesheet" type="text/css" href="product.css">
-        <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Freecodecamp test suite -->
-        <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
-        <!-- known test failures: image source is not a url, flex box use and media queries aren't being detected although I included both
+
+<head>
+    <meta charset="utf-8">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="product.css">
+    <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+            <img id="header-img" src="celtic-knot.png" alt="Celtic knot">
+            <h1>Magical Armaments</h1>
+            <nav id="nav-bar">
+                <a class="nav-link" href="#section1">Our Products</a>
+                <a class="nav-link" href="#section2">Featured Item</a>
+                <a class="nav-link" href="#section3">Pricing</a>
+            </nav>
+        </header>
+        <main>
+            <h2 id="section1">Our Products</h2>
+            <p>Whether you prefer wielding a greatsword, a bow or a wand, you'll find what you're looking for here at
+                Mystical Armanents.
+                And if not, you'll be happy to know we do take requests!
+                We are the only supplier able to guarantee:
+            </p>
+            <ul>
+                <li>Next-day delivery for in-stock items, delivered by griffon or dragon courier depending on weight.
+                </li>
+                <li>24-7 support. Contact us and a friendly wizard will arrive to assist you. (Please ensure
+                    anti-teleport spells are disabled).</li>
+                <li>Free returns. Due to the nature of many of these items, teleportation is not possible and we don't
+                    recommend trying. Instead, contact us
+                    and a courier will arrive the next day.
+                </li>
+            </ul>
+            <h2 id="section2">Featured Item</h2>
+            <p>Last seen at Minas Tirith, the fabled elven sword Glamdring has recently come into our possession.
+                For this priceless artifact, we are asking only 4000 gold! We also came across some ancient footage of
+                its discovery
+                by its last known wielder: </p>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/mdbIPO9-nbg" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <h2 id="section3">Pricing</h2>
+            <p>Our current stock includes: </p>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Auriel's Bow</td>
+                    <td>Sets your target on fire! Excellent for destroying undead</td>
+                    <td>2500 gold</td>
+                </tr>
+                <tr>
+                    <td>Frostmourne</td>
+                    <td>A two-handed runeblade, recently reforged and ready to drain the life and soul of your victims
+                    </td>
+                    <td>2500 gold</td>
+                </tr>
+                <tr>
+                    <td>Glamdring</td>
+                    <td>A hand-and-a-half sword, forged by elves and particularly adept at smiting orcs </td>
+                    <td>4000 gold</td>
+                </tr>
+                <tr>
+                    <td>Jadis' Wand</td>
+                    <td>A magical sceptre capable of turning your enemies to stone </td>
+                    <td>6000 gold</td>
+                </tr>
+                <tr>
+                    <td>Keyblade</td>
+                    <td>The perfect weapon for fighting the darkness within (5 in stock)</td>
+                    <td>500 gold</td>
+                </tr>
+            </table>
+            <p>Our prices are very flexible. We accept alternate currencies including unicorn blood and dragon scales,
+                so please feel free to email us with your inquiries. You may also contact us if you're interested in a
+                particular item we don't have.
+                Price will depend on procurement difficulty.
+            </p>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <input type="submit" name="submit" id="submit" value="Submit">
+            </form>
+        </main>
+    </div>
+    <footer>
+        <hr>
+        <p>By Rebecca Lowe 2019</p>
+    </footer>
+    <!-- Freecodecamp test suite -->
+    <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+    <!-- known test failures: image source is not a url, flex box use and media queries aren't being detected although I included both
         -- I'm satisfied this meets the requirements -->
-        <div id="container">
-            <header id="header">
-                <img id="header-img" src="celtic-knot.png" alt="Celtic knot">
-                <h1>Magical Armaments</h1>
-                <nav id="nav-bar">
-                    <a class="nav-link" href="#section1">Our Products</a>
-                    <a class="nav-link" href="#section2">Featured Item</a>
-                    <a class="nav-link" href="#section3">Pricing</a>
-                </nav>
-            </header>
-            <main>
-                <h2 id="section1">Our Products</h2>
-                <p>Whether you prefer wielding a greatsword, a bow or a wand, you'll find what you're looking for here at Mystical Armanents.
-                    And if not, you'll be happy to know we do take requests!
-                    We are the only supplier able to guarantee:
-                </p>
-                <ul>
-                    <li>Next-day delivery for in-stock items, delivered by griffon or dragon courier depending on weight.</li>
-                    <li>24-7 support. Contact us and a friendly wizard will arrive to assist you. (Please ensure anti-teleport spells are disabled).</li>
-                    <li>Free returns. Due to the nature of many of these items, teleportation is not possible and we don't recommend trying. Instead, contact us
-                        and a courier will arrive the next day.
-                    </li>
-                </ul>
-                <h2 id="section2">Featured Item</h2>
-                <p>Last seen at Minas Tirith, the fabled elven sword Glamdring has recently come into our possession.
-                    For this priceless artifact, we are asking only 4000 gold! We also came across some ancient footage of its discovery
-                    by its last known wielder: </p>
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/mdbIPO9-nbg"
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h2 id="section3">Pricing</h2>
-                <p>Our current stock includes: </p>
-                <table>
-                    <tr>
-                        <th>Item</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>Auriel's Bow</td>
-                        <td>Sets your target on fire! Excellent for destroying undead</td>
-                        <td>2500 gold</td>
-                    </tr>
-                    <tr>
-                        <td>Frostmourne</td>
-                        <td>A two-handed runeblade, recently reforged and ready to drain the life and soul of your victims </td>
-                        <td>2500 gold</td>
-                    </tr>
-                    <tr>
-                        <td>Glamdring</td>
-                        <td>A hand-and-a-half sword, forged by elves and particularly adept at smiting orcs </td>
-                        <td>4000 gold</td>
-                    </tr>
-                    <tr>
-                        <td>Jadis' Wand</td>
-                        <td>A magical sceptre capable of turning your enemies to stone </td>
-                        <td>6000 gold</td>
-                    </tr>
-                    <tr>
-                        <td>Keyblade</td>
-                        <td>The perfect weapon for fighting the darkness within (5 in stock)</td>
-                        <td>500 gold</td>
-                    </tr>
-                </table>
-                <p>Our prices are very flexible. We accept alternate currencies including unicorn blood and dragon scales,
-                    so please feel free to email us with your inquiries. You may also contact us if you're interested in a particular item we don't have.
-                    Price will depend on procurement difficulty.
-                </p>
-                <form id="form" action="https://www.freecodecamp.com/email-submit">
-                    <input type="email" name="email" id="email" placeholder="Enter your email address" required>
-                    <input type="submit" name="submit" id="submit" value="Submit">
-                </form>
-            </main>
-        </div>
-        <footer>
-            <hr>
-            <p>By Rebecca Lowe 2019</p>
-        </footer>
-    </body>
+</body>
+
 </html>
